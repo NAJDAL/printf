@@ -1,77 +1,7 @@
-
 ---
 
 # ALX Software Engineering Programme: Printf Project
 
-<<<<<<< HEAD
-Compilation
-Your code will be compiled this way:
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
-As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions)
-Our main files will include your main header file (main.h): #include main.h
-You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. 
-
-
-Example of test file that you could use:
-alex@ubuntu:~/c/printf$ cat main.c 
-#include <limits.h>
-#include <stdio.h>
-#include "main.h"
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-    int len;
-    int len2;
-    unsigned int ui;
-    void *addr;
-
-    len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
-    ui = (unsigned int)INT_MAX + 1024;
-    addr = (void *)0x7ffe637541f0;
-    _printf("Length:[%d, %i]\n", len, len);
-    printf("Length:[%d, %i]\n", len2, len2);
-    _printf("Negative:[%d]\n", -762534);
-    printf("Negative:[%d]\n", -762534);
-    _printf("Unsigned:[%u]\n", ui);
-    printf("Unsigned:[%u]\n", ui);
-    _printf("Unsigned octal:[%o]\n", ui);
-    printf("Unsigned octal:[%o]\n", ui);
-    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
-    _printf("Address:[%p]\n", addr);
-    printf("Address:[%p]\n", addr);
-    len = _printf("Percent:[%%]\n");
-    len2 = printf("Percent:[%%]\n");
-    _printf("Len:[%d]\n", len);
-    printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");
-    return (0);
-}
-alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
-Let's try to printf a simple sentence.
-Length:[39, 39]
-Unknown:[??|r?A???]
-Percent:[%]
-String:[I am a string !]
-Unsigned:[2147484671]
-Unsigned:[2147484671]
-Unsigned octal:[20000001777]
-Unsigned octal:[20000001777]
-Unsigned hexadecimal:[800003ff, 800003FF]
-Unsigned hexadecimal:[800003ff, 800003FF]
-
-=======
 ## Overview
 
 This project introduces a program designed for formatted output conversion in the C programming language. Developed as an integral component of the low-level programming and algorithm track at ALX Software Engineering Programme, this program emulates the behavior of the C standard library function, `printf`.
@@ -104,7 +34,7 @@ int main(void)
 To compile the program:
 
 ```
- $ gcc *.c -o a.out
+$ gcc *.c -o your_program_name
 ```
 
 To execute your program:
@@ -257,7 +187,6 @@ Uryyb, Jbeyq
 ```
 
 - `%p`: Format a pointer argument to output its memory address in hexadecimal format, preceded by `0x`.
->>>>>>> 9b106d13c9cb56bacd4ae0934c234b2b3754bd24
 
 Example:
 
