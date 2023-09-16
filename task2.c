@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
     {
         if (*format == '%')
         {
-            format++; /* Move past the '%' */
+            format++; // Move past the '%'
             switch (*format)
             {
                 case 'c':
@@ -35,6 +35,9 @@ int _printf(const char *format, ...)
                 case 'd':
                 case 'i':
                     count += printf("%d", va_arg(args, int));
+                    break;
+                case 'b':
+                    count += print_binary(va_arg(args, unsigned int));
                     break;
                 case '%':
                     count += putchar('%');
@@ -56,5 +59,20 @@ int _printf(const char *format, ...)
 
     va_end(args);
 
+    return count;
+}
+
+/**
+ * print_binary - Prints an unsigned int in binary representation.
+ * @n: The unsigned int to print in binary.
+ *
+ * Return: The number of characters printed.
+ */
+int print_binary(unsigned int n)
+{
+    int count = 0;
+    if (n > 1)
+        count += print_binary(n / 2);
+    count += putchar('0' + (n % 2));
     return count;
 }

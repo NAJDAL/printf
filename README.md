@@ -1,42 +1,31 @@
-Title: "C Programming - printf Team Project Specification"
+We're working on a group project to implement your own version of the  function in C. The project has some specific requirements and guidelines that you need to follow. Here's a summary of what you should do:printf
 
-Group Project Overview:
+Project Overview:
 
-In this team project, the objective is to implement a function that generates formatted output according to specified format specifiers. The project involves handling various standard and custom conversion specifiers, as well as addressing specific requirements related to flag characters, length modifiers, field width, precision, and custom specifier behavior. The primary aim is to optimize performance by utilizing a local buffer.
+You need to create your own  function.printf
+The code will be compiled on Ubuntu 20.04 LTS using , with specific compilation options: .gcc-Wall -Werror -Wextra -pedantic -std=gnu89
+General Requirements:
 
-Project Tasks and Objectives:
+Use an allowed editor (vi, vim, emacs).
+All your code files should end with a new line.
+Create a  file at the root of your project.README.md
+Follow the Betty style for code formatting.
+Avoid using global variables.
+Limit each file to a maximum of 5 functions.
+Do not include  functions in your C files, as the testing will be done with separate  files provided by the instructor.mainmain.c
+Prototype all your functions in a header file called , and include guard this header.main.h
+You are responsible for your  function; it won't be provided._putchar
+Use authorized functions and macros, including , , , , , , and .writemallocfreeva_startva_endva_copyva_arg
+Compilation:
 
-Develop a function to generate formatted output based on specified format specifiers.
+Your code will be compiled using  with the specified flags.gcc
+Your code should not contain any  functions in the root directory.main
+Testing:
 
-Handle the following standard conversion specifiers: d, i, u, o, x, X.
+You should create your own test cases to ensure your  function works correctly. The provided  file is just an example._printfmain.c
+Academic Integrity:
 
-Implement custom conversion specifiers as follows:
-
-Custom conversion specifier: %r.
-Custom conversion specifier: %p.
-Address custom specifier behavior for each custom conversion specifier.
-
-Manage flag characters for non-custom conversion specifiers:
-
-Flag characters to handle: 0, -.
-Implement length modifiers for non-custom conversion specifiers:
-
-Length modifiers to handle: l, h.
-Manage field width for non-custom conversion specifiers.
-
-Address precision for non-custom conversion specifiers.
-
-Handle additional custom conversion specifiers:
-
-Custom conversion specifier: %s.
-Ensure all the above functionalities work together seamlessly to produce formatted output.
-
-Project Guidelines:
-
-Utilize a local buffer with a capacity of 1024 characters to minimize calls to the write function and optimize performance.
-Project Notes:
-
-This project aims to create a robust and efficient implementation of the printf function, adhering to standard C conventions while accommodating custom behavior. The project involves handling a variety of conversion specifiers, flag characters, length modifiers, and precision settings to provide flexibility in formatting output.
-
-The team should work collaboratively to ensure all requirements are met and thoroughly tested to produce accurate and well-formatted output in compliance with the specified format specifiers.
+Do not plagiarize or copy code from others.
+The project is meant for you to learn and implement your own solution.
+Based on this information, it looks like you need to implement the  function following the rules and guidelines provided. Remember to thoroughly test your code with various format specifiers and edge cases to ensure it works as expected. Good luck with your project!_printf
  Project to be done in teams of 2 people (your team: Loay Awadalla, Najd Aleid)

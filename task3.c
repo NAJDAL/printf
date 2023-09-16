@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
     {
         if (*format == '%')
         {
-            format++; /* Move past the '%' */
+            format++; // Move past the '%'
             switch (*format)
             {
                 case 'c':
@@ -35,6 +35,18 @@ int _printf(const char *format, ...)
                 case 'd':
                 case 'i':
                     count += printf("%d", va_arg(args, int));
+                    break;
+                case 'u':
+                    count += printf("%u", va_arg(args, unsigned int));
+                    break;
+                case 'o':
+                    count += printf("%o", va_arg(args, unsigned int));
+                    break;
+                case 'x':
+                    count += printf("%x", va_arg(args, unsigned int));
+                    break;
+                case 'X':
+                    count += printf("%X", va_arg(args, unsigned int));
                     break;
                 case '%':
                     count += putchar('%');
